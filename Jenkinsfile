@@ -1,10 +1,10 @@
 node {
     def app
     
-    env.IMAGE = 'menaps4life/ndohapp'
+    env.IMAGE = 'menaps4life/naps-app'https://
 
     stage('Clone repository') {
-             git branch: 'main', url: 'https://github.com/Menaps4life/argocd-amazon-manifest.git'  
+             git branch: 'main', url: 'https://https://github.com/Menaps4life/argocd-amazon-manifest.git'  
     }
 
     stage('Update GIT') {
