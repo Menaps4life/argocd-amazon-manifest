@@ -1,7 +1,7 @@
 node {
     def app
     
-    env.IMAGE = 'menaps4life/naps-app'https://
+    env.IMAGE = 'menaps4life/naps-app
 
     stage('Clone repository') {
              git branch: 'main', url: 'https://https://github.com/Menaps4life/argocd-amazon-manifest.git'  
@@ -10,11 +10,11 @@ node {
     stage('Update GIT') {
             script {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-                    withCredentials([usernamePassword(credentialsId: 'git-project', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
+                    withCredentials([usernamePassword(credentialsId: 'napoleon-github', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
                         //script {def encodedPassword = URLEncoder.encode("$GIT_PASSWORD",'UTF-8')}
                         //script  {def IMAGE='ooghenekaro/amazon'}
                         sh "git config user.email 'ndohnaps2@gmail.com'
-                        sh "git config user.name "menaps4life"
+                        sh "git config user.name "Menaps4life"
                         //sh "git switch master"
                         sh "cat deployment.yml"
                         sh "sed -i 's+${IMAGE}.*+${IMAGE}:${DOCKERTAG}+g' deployment.yml"
