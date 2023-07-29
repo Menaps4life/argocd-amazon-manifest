@@ -23,7 +23,7 @@ spec:
     spec: # Pod spec
       containers:
       - name: amazon-container
-        image: Menaps4life/naps-app:latest
+        image: Menaps4life/mamazon:latest
         ports:
         - containerPort: 3000
         
