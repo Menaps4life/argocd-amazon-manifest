@@ -10,9 +10,9 @@ node {
     stage('Update GIT') {
             script {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-                    withCredentials([usernamePassword(credentialsId: 'ndoh-github', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
+                    withCredentials([usernamePassword(credentialsId: 'napsy-github', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
                         //script {def encodedPassword = URLEncoder.encode("$GIT_PASSWORD",'UTF-8')}
-                        //script  {def IMAGE='ooghenekaro/amazon'}
+                        //script  {def IMAGE='menaps4life/amazon'}
                         sh "git config user.email 'ndohnaps2@gmail.com"
                         sh "git config user.name "Menaps4life"
                         //sh "git switch master"
